@@ -1,8 +1,8 @@
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./styles/Global.js";
-import { defaultTheme } from "./styles/themes/default.js";
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from './styles/Global.js'
+import { defaultTheme } from './styles/themes/default.js'
 
-import { Title } from "./styles.js";
+import { Title } from './styles.js'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
 
       <GlobalStyle />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
