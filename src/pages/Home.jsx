@@ -1,5 +1,11 @@
+import { Dashboard } from "../components/Dashboard";
 import { Header } from "../components/Header";
 
 export function Home() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Dashboard />
+    </>
+  );
 }
