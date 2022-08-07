@@ -1,4 +1,4 @@
-import { Container } from "../Header/styles";
+import { Container } from "./styles";
 
 export function TransactionsTable() {
   return (
@@ -6,26 +6,27 @@ export function TransactionsTable() {
       <table>
         <thead>
           <tr>
-            <th>Ti</th>
-            <th>Value</th>
+            <th>Title</th>
+            <th>Amount</th>
             <th>Category</th>
-            <th>Data</th>
+            <th>Date</th>
           </tr>
-          <tbody>
-            <tr>
-              <td>Web developed</td>
-              <td className="deposit">$300.00</td>
-              <td>Developement</td>
-              <td>02/20/2022</td>
-            </tr>
-            <tr>
-              <td>Web developed</td>
-              <td className="withdraw">$500.00</td>
-              <td>Developement</td>
-              <td>02/20/2022</td>
-            </tr>
-          </tbody>
         </thead>
+
+        <tbody>
+          <tr>
+            <td>Web developed</td>
+            <td className="deposit">$300.00</td>
+            <td>Developement</td>
+            <td>02/20/2022</td>
+          </tr>
+          <tr>
+            <td>Web developed</td>
+            <td className="withdraw">$500.00</td>
+            <td>Developement</td>
+            <td>02/20/2022</td>
+          </tr>
+        </tbody>
       </table>
     </Container>
   );

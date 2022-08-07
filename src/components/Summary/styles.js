@@ -4,14 +4,13 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: -10rem;
+  margin-top: -7.4rem;
 
   div {
-    background: ${(props) => props.theme["green-200"]};
+    background: ${(props) => props.theme["white-100"]};
 
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
-    color: ${(props) => props.theme["white-400"]};
 
     header {
       display: flex;
@@ -25,9 +24,11 @@ export const Container = styled.div`
       font-size: 2rem;
       font-weight: 500;
       line-height: 3rem;
+      border: 0;
     }
     &.highlight-background {
-      background: ${(props) => props.theme["green-300"]};
+      background: ${(props) => props.theme["green-200"]};
+      color: ${(props) => props.theme["white-400"]};
     }
   }
 `;
