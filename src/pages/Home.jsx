@@ -2,6 +2,10 @@ import { Dashboard } from "../components/Dashboard";
 import { Header } from "../components/Header";
 import { useState } from "react";
 import Modal from "react-modal";
+import { NewTransactionModal } from "../components/NewTransactionModal";
+
+Modal.setAppElement("#root");
+
 export function Home() {
   const [isNewTransactionOpen, setIsNewTransactionOpen] = useState(false);
 
@@ -16,12 +20,10 @@ export function Home() {
   return (
     <>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
-      <Modal
+      <NewTransactionModal
         isOpen={isNewTransactionOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Add transaction</h2>
-      </Modal>
+      />
       <Dashboard />
     </>
   );
