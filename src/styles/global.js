@@ -37,6 +37,25 @@ export const GlobalStyle = createGlobalStyle`
   [disable] {
     opacity: 0.6;
     cursor: not-allowed;
+  }  
+
+  .react-modal-overlay {
+    background: rgb(0, 0, 0, 0.5);
+    
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
+  .react-modal-content {
+    width: 100%;
+    max-width: 576px;
+    background: ${(props) => props.theme["white-400"]};
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.25rem;
+  }
 `;
