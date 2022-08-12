@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { darken } from "polished";
+import { darken, transparentize } from "polished";
 
 export const Container = styled.form`
   h2 {
-    color: ${(props) => props.theme["grey-300"]};
+    color: ${(props) => props.theme["grey-600"]};
     font-size: 1.5rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   input {
     width: 100%;
@@ -48,21 +48,26 @@ export const Container = styled.form`
 `;
 
 export const TransactionTypeContainer = styled.div`
-  margin: 1rem;
+  margin: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
-
-  button {
-  }
 `;
+
+const colors = {
+  green: "#33CC95",
+  red: "#E52E4D",
+};
 
 export const RadioBox = styled.button`
   height: 4rem;
   border: 1px solid #d7d7d7;
   border-radius: 0.25rem;
 
-  background: transparent;
+  background: ${(props) =>
+    props.isActive
+      ? transparentize(0.9, colors[props.activeColor])
+      : "transparent"};
 
   display: flex;
   align-items: center;

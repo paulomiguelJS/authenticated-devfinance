@@ -15,13 +15,13 @@ export function NewTransactionModal({ isOpen, onRequestClose }) {
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
-      <RadioBox
+      <button
         type="button"
         onClick={onRequestClose}
         className="react-modal-close"
       >
         <img src={closeImg} alt="Close Modal" />
-      </RadioBox>
+      </button>
       <Container>
         <h2>Add transaction</h2>
         <input placeholder="Title" />
@@ -32,19 +32,23 @@ export function NewTransactionModal({ isOpen, onRequestClose }) {
             onClick={() => {
               setType("deposit");
             }}
+            isActive={type === "deposit"}
+            activeColor="green"
           >
             <img src={incomeImg} alt="Income" />
             <span>Income</span>
           </RadioBox>
-          <button
+          <RadioBox
             type="button"
             onClick={() => {
               setType("withdraw");
             }}
+            isActive={type === "withdraw"}
+            activeColor="red"
           >
-            <img src={outcomeImg} alt="outcome" />
-            <span>Income</span>
-          </button>
+            <img src={outcomeImg} alt="Outcome" />
+            <span>Outcome</span>
+          </RadioBox>
         </TransactionTypeContainer>
         <input placeholder="Category" />
         <button type="submit">Add Transaction</button>
