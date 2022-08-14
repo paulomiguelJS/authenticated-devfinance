@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, TransactionTypeContainer, RadioBox } from "./styles";
 import Modal from "react-modal";
+import { api } from "../../services/api";
 
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
@@ -15,12 +16,13 @@ export function NewTransactionModal({ isOpen, onRequestClose }) {
 
   function handleCreateNewTransaciton(event) {
     event.preventDefault();
-    console.log({
+    const data = {
       title,
       value,
       category,
       type,
-    });
+    };
+    api.post("/transactions", data);
   }
   return (
     <Modal
