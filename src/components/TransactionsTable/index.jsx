@@ -27,9 +27,19 @@ export function TransactionsTable() {
             return (
               <tr key={transaction.id}>
                 <td>{transaction.title}</td>
-                <td className={transaction.type}>{transaction.amount}</td>
+                <td className={transaction.type}>
+                  {new Intl.NumberFormat("us-EN", {
+                    style: "currency",
+                    currency: "USD",
+                  }).format(transaction.amount)}
+                  {transaction.amount}
+                </td>
                 <td>{transaction.category}</td>
-                <td>{transaction.createdAt}</td>
+                <td>
+                  {new Intl.DateTimeFormat("us-EN").format(
+                    new Date(transaction.createdAt),
+                  )}
+                </td>
               </tr>
             );
           })}
