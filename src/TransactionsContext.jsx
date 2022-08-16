@@ -12,8 +12,12 @@ export function TransactionsProvider({ children }) {
       .then((response) => setTransactions(response.data.transactions));
   }, []);
 
+  function createTransaction(transaction) {
+    api.post("/transactions", transaction);
+  }
+
   return (
-    <TransactionsContext.Provider value={transactions}>
+    <TransactionsContext.Provider value={{ transactions, createTransaction }}>
       {children}
     </TransactionsContext.Provider>
   );
