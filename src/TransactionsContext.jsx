@@ -12,8 +12,8 @@ export function TransactionsProvider({ children }) {
       .then((response) => setTransactions(response.data.transactions));
   }, []);
 
-  function createTransaction(transaction) {
-    api.post("/transactions", transaction);
+  async function createTransaction(transaction) {
+    await api.post("/transactions", transaction);
   }
 
   return (

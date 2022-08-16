@@ -16,14 +16,16 @@ export function NewTransactionModal({ isOpen, onRequestClose }) {
 
   const [type, setType] = useState("deposit");
 
-  function handleCreateNewTransaciton(event) {
+  async function handleCreateNewTransaciton(event) {
     event.preventDefault();
-    createTransaction({
+    await createTransaction({
       title,
       amount,
       category,
       type,
     });
+
+    onRequestClose();
   }
 
   return (
