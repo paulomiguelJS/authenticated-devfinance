@@ -31,4 +31,8 @@ export const Container = styled.div`
       color: ${(props) => props.theme["white-400"]};
     }
   }
+
+  @media (max-width: 835px) {
+    grid-template-columns: none;
+  }
 `;
