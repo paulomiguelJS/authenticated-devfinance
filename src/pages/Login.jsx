@@ -1,8 +1,9 @@
+import { LoginForm } from "../components/LoginForm/index";
+
 export function Login() {
   return (
-    <>
-      <h1>Login Page</h1>
-      <p>Paragraph</p>
-    </>
+    <div style={{ background: "black", lineHeight: 10, padding: 20 }}>
+      <LoginForm />
+    </div>
   );
 }
