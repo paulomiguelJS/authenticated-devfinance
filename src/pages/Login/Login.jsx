@@ -17,7 +17,7 @@ export function Login() {
           <form>
             <h5>Log in</h5>
             <label>Email</label>
-            <input type="text" placeholder="" />
+            <input type="text" placeholder="paul@email.com" />
             <label htmlFor="">Password</label>
             <input type="password" placeholder="Enter your Password" />
             <a href="">Forgot password?</a>
