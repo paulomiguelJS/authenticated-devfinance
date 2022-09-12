@@ -4,12 +4,16 @@ import dollarIcon from "../../assets/dollar-icon.svg";
 export function Login() {
   return (
     <Container>
-      <div>
-        <LeftSide>
-          <img src={dollarIcon} alt="IMG" />
-          <h4>Login here to see your transactions</h4>
-        </LeftSide>
-        <RightSide>
+      <LeftSide>
+        <div>
+          <div>
+            <img src={dollarIcon} alt="IMG" />
+            <h4>Login here to see your transactions</h4>
+          </div>
+        </div>
+      </LeftSide>
+      <RightSide>
+        <div>
           <form>
             <h5>Log in</h5>
             <label>Email</label>
@@ -19,8 +23,8 @@ export function Login() {
             <a href="">Forgot password?</a>
             <button>Login</button>
           </form>
-        </RightSide>
-      </div>
+        </div>
+      </RightSide>
     </Container>
   );
 }
