@@ -8,7 +8,10 @@ export function Login() {
         <div>
           <div>
             <img src={dollarIcon} alt="IMG" />
-            <h4>Login here to see your transactions</h4>
+            <h4>
+              Finance Manager is a professional responsible for preparing a
+              personal’s financial reports.
+            </h4>
           </div>
         </div>
       </LeftSide>

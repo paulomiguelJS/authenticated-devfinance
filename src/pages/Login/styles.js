@@ -5,6 +5,11 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
 
   height: 100vh;
+  margin: 0 auto;
+
+  .text {
+    max-width: 1220px;
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -23,18 +28,23 @@ export const LeftSide = styled.div`
     width: 80%;
 
     background: ${(props) => props.theme["blue-200"]};
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 46px 0px;
+
+    box-shadow: -1px 1px 15px rgba(0, 0, 0, 0.07),
+      -20px 1px 60px rgba(0, 0, 0, 0.07);
+
     border-radius: 4px;
 
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
+      max-width: 50%;
 
       h4 {
         color: ${(props) => props.theme["white-400"]};
         font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.7rem;
       }
 
       img {
@@ -58,8 +68,9 @@ export const RightSide = styled.div`
     height: 80vh;
     width: 80%;
 
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 46px 0px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.07),
+      20px 1px 60px rgba(0, 0, 0, 0.07);
+
     border-radius: 4px;
   }
 
@@ -75,7 +86,7 @@ export const RightSide = styled.div`
     color: ${(props) => props.theme["grey-600"]};
 
     h5 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       text-align: center;
 
       margin-bottom: 2rem;
@@ -91,10 +102,14 @@ export const RightSide = styled.div`
       }
     }
     input {
-      padding: 0 0.5rem;
+      padding: 0.1rem 0.5rem;
       height: 2.5rem;
       border: 0.5px solid ${(props) => props.theme["grey-300"]};
       border-radius: 4px;
+
+      outline: none;
+      border: 1px solid ${(props) => props.theme["blue-200"]};
+      transition: 0.5s;
 
       &::placeholder {
         font-size: 0.8rem;
@@ -108,6 +123,11 @@ export const RightSide = styled.div`
 
       color: ${(props) => props.theme["grey-600"]};
       text-decoration: none;
+      transition: 0.5s;
+
+      &:hover {
+        color: ${(props) => props.theme["blue-200"]};
+      }
 
       &:visited {
         color: none;
