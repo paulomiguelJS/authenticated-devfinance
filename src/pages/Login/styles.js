@@ -83,7 +83,7 @@ export const RightSide = styled.div`
     height: 60vh;
     width: 60%;
 
-    color: ${(props) => props.theme["grey-600"]};
+    color: ${(props) => props.theme["-600"]};
 
     h5 {
       font-size: 2rem;
@@ -104,7 +104,7 @@ export const RightSide = styled.div`
     input {
       padding: 0.1rem 0.5rem;
       height: 2.5rem;
-      border: 0.5px solid ${(props) => props.theme["grey-300"]};
+      border: 0.5px solid ${(props) => props.theme["-300"]};
       border-radius: 4px;
 
       outline: none;
@@ -121,7 +121,7 @@ export const RightSide = styled.div`
       text-align: end;
       font-size: 0.8rem;
 
-      color: ${(props) => props.theme["grey-600"]};
+      color: ${(props) => props.theme["-600"]};
       text-decoration: none;
       transition: 0.5s;
 

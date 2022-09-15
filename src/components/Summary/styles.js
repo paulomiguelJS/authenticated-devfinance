@@ -18,17 +18,22 @@ export const Container = styled.div`
       justify-content: space-between;
     }
 
+    p {
+      letter-spacing: 0.03rem;
+    }
+
     strong {
       display: block;
       margin-top: 1rem;
       font-size: 2rem;
       font-weight: 500;
       line-height: 3rem;
+      color: ${(props) => props.theme["black-200"]};
+
       border: 0;
     }
     &.highlight-background {
       background: ${(props) => props.theme["green-200"]};
-      color: ${(props) => props.theme["white-400"]};
     }
   }
 

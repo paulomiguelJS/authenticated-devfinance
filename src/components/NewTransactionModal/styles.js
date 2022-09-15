@@ -3,7 +3,7 @@ import { darken, transparentize } from "polished";
 
 export const Container = styled.form`
   h2 {
-    color: ${(props) => props.theme["grey-600"]};
+    color: ${(props) => props.theme["gray-600"]};
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -20,7 +20,7 @@ export const Container = styled.form`
     font-size: 1rem;
 
     &::placeholder {
-      color: ${(props) => props.theme["grey-300"]};
+      color: ${(props) => props.theme["gray-300"]};
     }
 
     & + input {
@@ -87,6 +87,6 @@ export const RadioBox = styled.button`
     display: inline-block;
     margin-left: 1rem;
     font-size: 1rem;
-    color: ${(props) => props.theme["grey-600"]};
+    color: ${(props) => props.theme["gray-600"]};
   }
 `;

@@ -12,8 +12,9 @@ export const Container = styled.div`
     border: 1px splid red;
 
     th {
-      color: ${(props) => props.theme["grey-300"]};
-      font-weight: 400;
+      color: ${(props) => props.theme["gray-300"]};
+      font-weight: 600;
+      letter-spacing: 0.1rem;
       padding: 1rem 2rem;
       line-height: 1.5rem;
       text-align: left;
@@ -23,11 +24,12 @@ export const Container = styled.div`
       padding: 1rem 2rem;
       border: 0;
       background: ${(props) => props.theme["white-100"]};
-      color: ${(props) => props.theme["grey-300"]};
+      color: ${(props) => props.theme["gray-300"]};
       border-radius: 0.25rem;
 
       &:first-child {
-        color: black;
+        color: ${(props) => props.theme["black-200"]};
+
       }
 
       &.deposit {
