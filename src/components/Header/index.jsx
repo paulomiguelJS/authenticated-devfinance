@@ -6,7 +6,11 @@ export function Header({ onOpenNewTransactionModal }) {
   return (
     <Container>
       <Content>
-        <img src={logoImg} alt="dt money" />
+        <h2>
+          <img src={logoImg} alt="Financial Manager" />
+          Financial<span>Manager</span>
+        </h2>
+
         <div>
           {" "}
           <button type="button" onClick={onOpenNewTransactionModal}>

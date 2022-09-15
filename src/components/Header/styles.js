@@ -14,6 +14,23 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: ${(props) => props.theme["gray-600"]};
+    font-weight: 200;
+
+    img {
+      margin-right: 0.5rem;
+    }
+    span {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: ${(props) => props.theme["white-400"]};
+
+    }
+  }
   div {
     display: flex;
     gap: 1rem;
