@@ -1,8 +1,9 @@
 import logoImg from "../../assets/logo.svg";
+import { Avatar } from "../Avatar";
 
 import { Container, Content } from "./styles";
 
-export function Header({ onOpenNewTransactionModal }) {
+export function Header({ onOpenNewTransactionModal, props }) {
   return (
     <Container>
       <Content>
@@ -16,10 +17,7 @@ export function Header({ onOpenNewTransactionModal }) {
           <button type="button" onClick={onOpenNewTransactionModal}>
             New Transaction
           </button>
-          <button type="button">
-            Paulo Miguel
-            <img src="" alt="Profile" />
-          </button>
+          <Avatar src={logoImg} />
         </div>
       </Content>
     </Container>

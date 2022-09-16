@@ -28,11 +28,11 @@ export const Content = styled.div`
       font-size: 1.5rem;
       font-weight: 500;
       color: ${(props) => props.theme["white-400"]};
-
     }
   }
   div {
     display: flex;
+    align-items: center;
     gap: 1rem;
   }
 
