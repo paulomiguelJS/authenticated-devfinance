@@ -1,6 +1,6 @@
 import logoImg from "../../assets/logo.svg";
 import { Avatar } from "../Avatar";
-
+import { DropdownItem } from "../Avatar/DropdownItem";
 import { Container, Content } from "./styles";
 
 export function Header({ onOpenNewTransactionModal, props }) {
@@ -13,11 +13,16 @@ export function Header({ onOpenNewTransactionModal, props }) {
         </h2>
 
         <div>
-          {" "}
           <button type="button" onClick={onOpenNewTransactionModal}>
             New Transaction
           </button>
-          <Avatar src={logoImg} />
+          <div>
+            <Avatar src={logoImg} />
+            <DropdownItem name="My Profile" />
+            <DropdownItem name="Edit Profile" />
+            <DropdownItem name="Settings" />
+            <DropdownItem name="Logout" />
+          </div>
         </div>
       </Content>
     </Container>
