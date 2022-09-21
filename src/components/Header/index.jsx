@@ -1,9 +1,12 @@
+import { useState } from "react";
 import logoImg from "../../assets/logo.svg";
-import { Avatar } from "../Avatar";
-import { DropdownItem } from "../Avatar/DropdownItem";
-import { Container, Content } from "./styles";
+import { Avatar } from "../Avatar/index";
+import { DropdownItem } from "../DropdownItem";
+import { Container, Content, DropDownListContainer } from "./styles";
 
-export function Header({ onOpenNewTransactionModal, props }) {
+export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggling = () => setIsOpen(!isOpen);
   return (
     <Container>
       <Content>
@@ -12,17 +15,16 @@ export function Header({ onOpenNewTransactionModal, props }) {
           Financial<span>Manager</span>
         </h2>
 
-        <div>
-          <button type="button" onClick={onOpenNewTransactionModal}>
-            New Transaction
-          </button>
-          <div>
-            <Avatar src={logoImg} />
-            <DropdownItem name="My Profile" />
-            <DropdownItem name="Edit Profile" />
-            <DropdownItem name="Settings" />
-            <DropdownItem name="Logout" />
-          </div>
+        <div onClick={toggling}>
+          <Avatar src={logoImg} />
+          {isOpen && (
+            <DropDownListContainer>
+              <DropdownItem name="My Profile" />
+              <DropdownItem name="Edit Profile" />
+              <DropdownItem name="Settings" />
+              <DropdownItem name="Logout" />
+            </DropDownListContainer>
+          )}
         </div>
       </Content>
     </Container>
