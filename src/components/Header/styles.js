@@ -3,20 +3,6 @@ import styled from "styled-components";
 export const Container = styled.header`
   background: ${(props) => props.theme["blue-600"]};
 `;
-export const DropDownListContainer = styled.div`
-  padding: 0;
-  margin: 0;
-  padding-left: 1em;
-  background: #ffffff;
-  border: 2px solid #e5e5e5;
-  box-sizing: border-box;
-  color: #3faffa;
-  font-size: 1.3rem;
-  font-weight: 500;
-  &:first-child {
-    padding-top: 0.8em;
-  }
-`;
 
 export const Content = styled.div`
   max-width: 1120px;
@@ -29,9 +15,9 @@ export const Content = styled.div`
   justify-content: space-between;
 
   > div {
-    border: 3px solid green;
+    position: relative;
   }
-  }
+
   h2 {
     display: flex;
     align-items: center;
@@ -70,4 +56,13 @@ export const Content = styled.div`
       filter: brightness(0.9);
     }
   }
+`;
+
+export const DropDownListContainer = styled.div`
+  position: absolute;
+  top: 55px;
+  z-index: 2;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 0.25rem;
 `;

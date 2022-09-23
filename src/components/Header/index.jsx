@@ -6,7 +6,7 @@ import { Container, Content, DropDownListContainer } from "./styles";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggling = () => setIsOpen(!isOpen);
+  const dropdownToggling = () => setIsOpen(!isOpen);
   return (
     <Container>
       <Content>
@@ -15,7 +15,7 @@ export function Header() {
           Financial<span>Manager</span>
         </h2>
 
-        <div onClick={toggling}>
+        <div onClick={dropdownToggling}>
           <Avatar src={logoImg} />
           {isOpen && (
             <DropDownListContainer>

@@ -32,7 +32,7 @@ export const LeftSide = styled.div`
     box-shadow: -1px 1px 15px rgba(0, 0, 0, 0.07),
       -20px 1px 60px rgba(0, 0, 0, 0.07);
 
-    border-radius: 4px;
+    border-radius: 0.25rem;
 
     div {
       display: flex;
@@ -71,7 +71,7 @@ export const RightSide = styled.div`
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.07),
       20px 1px 60px rgba(0, 0, 0, 0.07);
 
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
 
   form {
@@ -104,8 +104,8 @@ export const RightSide = styled.div`
     input {
       padding: 0.1rem 0.5rem;
       height: 2.5rem;
-      border: 0.5px solid ${(props) => props.theme["-300"]};
-      border-radius: 4px;
+      border: 0.5px solid ${(props) => props.theme["gray-300"]};
+      border-radius: 0.25rem;
 
       outline: none;
       border: 1px solid ${(props) => props.theme["blue-200"]};
@@ -139,7 +139,7 @@ export const RightSide = styled.div`
       padding: 0.7rem;
 
       background-color: ${(props) => props.theme["blue-200"]};
-      border-radius: 4px;
+      border-radius: 0.25rem;
       border: ${(props) => props.theme["blue-200"]};
 
       font-weight: bold;
