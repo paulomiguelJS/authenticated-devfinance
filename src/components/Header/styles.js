@@ -60,9 +60,25 @@ export const Content = styled.div`
 
 export const DropDownListContainer = styled.div`
   position: absolute;
-  top: 55px;
+  top: 8px;
+  right: 62px;
   z-index: 2;
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.25rem;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    width: 0px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid #ffffff;
+    border-top: 10px solid transparent;
+
+    border-bottom: 10px solid transparent;
+  }
 `;
