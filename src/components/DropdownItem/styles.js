@@ -9,7 +9,7 @@ export const DropDownItem = styled.ul`
 
     a {
       color: ${(props) => props.theme["gray-600"]};
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 500;
       text-align: center;
       text-decoration: none;

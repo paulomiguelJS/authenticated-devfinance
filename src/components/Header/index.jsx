@@ -18,7 +18,7 @@ export function Header() {
         <div onClick={dropdownToggling}>
           <Avatar src={logoImg} />
           {isOpen && (
-            <DropDownListContainer>
+            <DropDownListContainer isOpen={isOpen}>
               <DropdownItem name="My Profile" />
               <DropdownItem name="Edit Profile" />
               <DropdownItem name="Settings" />
