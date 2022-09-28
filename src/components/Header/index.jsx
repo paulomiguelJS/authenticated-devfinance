@@ -2,14 +2,15 @@ import { useState } from "react";
 import logoImg from "../../assets/logo.svg";
 import { Avatar } from "../Avatar/index";
 import { DropdownItem } from "../DropdownItem";
-import { Container, Content, DropDownListContainer } from "./styles";
+import * as S from "./styles";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownToggling = () => setIsOpen(!isOpen);
+
   return (
-    <Container>
-      <Content>
+    <S.Container>
+      <S.Content>
         <h2>
           <img src={logoImg} alt="Financial Manager" />
           Financial<span>Manager</span>
@@ -17,16 +18,14 @@ export function Header() {
 
         <div onClick={dropdownToggling}>
           <Avatar src={logoImg} />
-          {isOpen && (
-            <DropDownListContainer isOpen={isOpen}>
-              <DropdownItem name="My Profile" />
-              <DropdownItem name="Edit Profile" />
-              <DropdownItem name="Settings" />
-              <DropdownItem name="Logout" />
-            </DropDownListContainer>
-          )}
+          <S.DropDownListContainer isOpen={isOpen}>
+            <DropdownItem name="My Profile" />
+            <DropdownItem name="Edit Profile" />
+            <DropdownItem name="Settings" />
+            <DropdownItem name="Logout" />
+          </S.DropDownListContainer>
         </div>
-      </Content>
-    </Container>
+      </S.Content>
+    </S.Container>
   );
 }

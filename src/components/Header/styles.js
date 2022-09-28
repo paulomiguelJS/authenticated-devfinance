@@ -61,13 +61,14 @@ export const Content = styled.div`
 export const DropDownListContainer = styled.div`
   position: absolute;
   top: 8px;
-  opacity: ${(isOpen) => (isOpen ? "1" : "0")};
   right: 60px;
   z-index: 2;
   padding: 1rem 0.5rem;
   background: #ffffff;
   border-radius: 0.25rem;
-  transition: height 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+
   &:after {
     content: "";
     display: block;
