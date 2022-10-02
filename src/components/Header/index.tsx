@@ -1,8 +1,10 @@
 import { useState } from "react";
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logo.svg";;
 import { Avatar } from "../Avatar/index";
 import { DropdownItem } from "../DropdownItem";
 import * as S from "./styles";
+
+
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
