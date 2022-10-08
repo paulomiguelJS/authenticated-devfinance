@@ -2,6 +2,7 @@ import { ProfilePic } from "./styles";
 
 interface ProfilePic {
   src: string;
+  alt: string;
 }
 
 export function Avatar() {
