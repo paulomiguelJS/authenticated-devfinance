@@ -1,10 +1,6 @@
 import { DropDownItem } from "./styles";
 
-interface DropProps {
-  name: string;
-}
-
-export function DropdownItem({ name }: DropProps) {
+export function DropdownItem({ name }) {
   return (
     <DropDownItem>
       <li>

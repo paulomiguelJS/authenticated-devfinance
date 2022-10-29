@@ -4,7 +4,7 @@ import { Avatar } from "../Avatar/index";
 import { DropdownItem } from "../DropdownItem";
 import * as S from "./styles";
 
-export function Header() {
+export function Header({ onOpenNewTransactionModal }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownToggling = () => setIsOpen(!isOpen);
 
@@ -15,7 +15,9 @@ export function Header() {
           <img src={logoImg} alt="Financial Manager" />
           Financial<span>Manager</span>
         </h2>
-
+        <button type="button" onClick={onOpenNewTransactionModal}>
+          New Transaction
+        </button>
         <div onClick={dropdownToggling}>
           <Avatar src={logoImg} />
           <S.DropDownListContainer isOpen={isOpen}>
