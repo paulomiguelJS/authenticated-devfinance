@@ -1,7 +1,18 @@
 import { Container, LeftSide, RightSide } from "./styles";
 import dollarIcon from "../../assets/dollar-icon.svg";
+import Modal from "react-modal";
+import { useState } from "react";
 
-export function Login({ SignIn }) {
+export function Login() {
+  const [show, setShow] = useState(false);
+
+  function handleOpenModal() {
+    setShow(true);
+  }
+  function handleCloseModal() {
+    setShow(false);
+  }
+
   return (
     <Container>
       <LeftSide>
@@ -23,7 +34,7 @@ export function Login({ SignIn }) {
             <input type="text" placeholder="paul@email.com" />
             <label htmlFor="">Password</label>
             <input type="password" placeholder="Enter your Password" />
-            <button type="button" onClick={SignIn}>
+            <button type="button" onClick={handleOpenModal}>
               Sign in
             </button>
 
@@ -33,6 +44,9 @@ export function Login({ SignIn }) {
           </form>
         </div>
       </RightSide>
+      <Modal isOpen={show}>
+        <h1>Teste</h1>
+      </Modal>
     </Container>
   );
 }
