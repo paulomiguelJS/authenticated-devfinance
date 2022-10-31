@@ -1,17 +1,19 @@
 import { Container, LeftSide, RightSide } from "./styles";
 import dollarIcon from "../../assets/dollar-icon.svg";
-import Modal from "react-modal";
+import { SignIn } from "./SignIn/SignIn";
 import { useState } from "react";
 
 export function Login() {
-  const [show, setShow] = useState(false);
+  const [openSignModal, setopenSignModal] = useState(false);
+  const handleOpenModalSignin = () => {
+    setopenSignModal(true);
+  };
 
-  function handleOpenModal() {
-    setShow(true);
-  }
-  function handleCloseModal() {
-    setShow(false);
-  }
+  const [openRecoverModal, setRecoverModal] = useState(false);
+
+  const handleOpenModalRecoverSign = () => {
+    setopenSignModal(true);
+  };
 
   return (
     <Container>
@@ -34,19 +36,20 @@ export function Login() {
             <input type="text" placeholder="paul@email.com" />
             <label htmlFor="">Password</label>
             <input type="password" placeholder="Enter your Password" />
-            <button type="button" onClick={handleOpenModal}>
+            <button type="button" onClick={handleOpenModalSignin}>
               Sign in
             </button>
-
-            <a href="">Forgot password?</a>
-
+            <button type="button" onClick={handleOpenModalRecoverSign}>
+              Forgot Password?
+            </button>
+            <SignIn
+              setopenSignModal={setopenSignModal}
+              openSignModal={openSignModal}
+            />
             <button>Login</button>
           </form>
         </div>
       </RightSide>
-      <Modal isOpen={show}>
-        <h1>Teste</h1>
-      </Modal>
     </Container>
   );
 }
