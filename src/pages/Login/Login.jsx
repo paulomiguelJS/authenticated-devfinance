@@ -1,18 +1,20 @@
 import { Container, LeftSide, RightSide } from "./styles";
 import dollarIcon from "../../assets/dollar-icon.svg";
 import { SignIn } from "./SignIn/SignIn";
+import { RecoverPassword } from "./RecoverPassword/RecoverPassword";
+
 import { useState } from "react";
 
 export function Login() {
   const [openSignModal, setopenSignModal] = useState(false);
+  const [openRecoverModal, setopenRecoverModal] = useState(false);
+
   const handleOpenModalSignin = () => {
     setopenSignModal(true);
   };
 
-  const [openRecoverModal, setRecoverModal] = useState(false);
-
   const handleOpenModalRecoverSign = () => {
-    setopenSignModal(true);
+    setopenRecoverModal(true);
   };
 
   return (
@@ -45,6 +47,10 @@ export function Login() {
             <SignIn
               setopenSignModal={setopenSignModal}
               openSignModal={openSignModal}
+            />
+            <RecoverPassword
+              setopenRecoverModal={setopenRecoverModal}
+              openRecoverModal={openRecoverModal}
             />
             <button>Login</button>
           </form>

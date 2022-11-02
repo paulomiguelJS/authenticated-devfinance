@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 
-export function RecoverPassword(setopenRecoverModal, openRecoverModal) {
+export function RecoverPassword({ setopenRecoverModal, openRecoverModal }) {
   function handleCloseModal() {
     setopenRecoverModal(false);
   }
