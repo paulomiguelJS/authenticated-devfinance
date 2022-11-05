@@ -21,18 +21,18 @@ export function SignIn({ setopenSignModal, openSignModal }) {
           <p>Create your account and make the change.</p>
           <div>
             <label htmlFor="name">Full name</label>
-            <input id="name" type="text" />
+            <input id="name" type="text" placeholder="Your name" />
             <label htmlFor="email">Your best email</label>
-            <input id="email" type="email" />
-            <label htmlFor="name">Phone</label>
-            <input id="phone" type="phone" />
+            <input id="email" type="email" placeholder="joe@email.com" />
+            <label htmlFor="phone">Phone</label>
+            <input id="phone" type="phone" placeholder="(603) 111 2121" />
             <label htmlFor="password">Password</label>
-            <input id="password" type="password" />
+            <input id="password" type="password" placeholder="********" />
           </div>
           <button type="submit">Create Account</button>
-          <p>
+          <span>
             I already have an account <a>Log in</a>
-          </p>
+          </span>
         </Container>
       </Modal>
     </>

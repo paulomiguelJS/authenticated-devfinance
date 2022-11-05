@@ -4,22 +4,25 @@ export const Container = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
 
   h2 {
     color: ${(props) => props.theme["gray-600"]};
     font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  p {
     margin-bottom: 2rem;
   }
 
   div {
     label {
-      padding-bottom: 1rem;
+      font-size: 1.2rem;
     }
   }
+
   input {
     width: 100%;
-    padding: 0 1.5rem;
     height: 4rem;
     border-radius: 0.25rem;
 
@@ -27,16 +30,13 @@ export const Container = styled.form`
     background: #e7e9ee;
 
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     margin: 0.5rem 0;
+    padding-left: 1rem;
 
     &::placeholder {
       color: ${(props) => props.theme["gray-300"]};
-    }
-
-    & + input {
-      margin-top: 1rem;
     }
   }
 
@@ -44,7 +44,7 @@ export const Container = styled.form`
     width: 100%;
     padding: 0 1.5rem;
     height: 4rem;
-    background: ${(props) => props.theme["green-200"]};
+    background: ${(props) => props.theme["blue-600"]};
     color: ${(props) => props.theme["white-100"]};
     border-radius: 0.25rem;
     border: 0;
@@ -58,7 +58,16 @@ export const Container = styled.form`
     }
   }
 
-  a {
-    color: red;
+  span {
+    margin-top: 1rem;
+    a {
+      color: ${(props) => props.theme["blue-200"]};
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
   }
 `;
