@@ -16,9 +16,13 @@ export const Container = styled.form`
   }
 
   div {
-    
-    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     label {
+      margin: 0.2rem 0;
+      padding: 0;
     }
   }
 
@@ -32,13 +36,10 @@ export const Container = styled.form`
 
     font-weight: 400;
     padding-left: 1rem;
+    margin-bottom: 1rem;
 
     &::placeholder {
       color: ${(props) => props.theme["gray-300"]};
-    }
-
-    & + input {
-      margin-top: 1rem;
     }
   }
 

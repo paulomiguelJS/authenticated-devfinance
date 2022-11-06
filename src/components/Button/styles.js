@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Btn = styled.button`
-margin-top: 5rem;
 padding: 0.7rem;
-width: ${(props) => (props.variant === "smaller" ? "80%" : "")};
+width: ${(props) => (props.variant === "smaller" ? "85%" : "100%")};
 
 background-color: ${(props) =>
-  props.theme === "blue" ? '["blue-200"]' : '["white-400"]'};
+  props.theme === "green" ? "#45e7ab" : "#306cea"};
+ 
 border-radius: 0.25rem;
-border: ${(props) => props.theme["blue-200"]};
+border: ${(props) => (props.theme === "green" ? "#45e7ab" : "#306cea")};
 
 font-weight: bold;
 letter-spacing: 1px;
-color: ${(props) => props.theme["white-400"]};
-transition: background-color 0.2s; 
+color: #f0f2f5;
+transition: fi 0.2s; 
 
    &:hover {
-  background-color: ${(props) => props.theme["blue-600"]}; 
+    filter: brightness(1.1);
 `;

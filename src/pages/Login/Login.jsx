@@ -38,20 +38,19 @@ export function Login() {
             <h5>Log in</h5>
             <label>Email</label>
             <input type="text" placeholder="paul@email.com" />
-            <label htmlFor="">Password</label>
+            <label>Password</label>
             <input type="password" placeholder="Enter your Password" />
-
-            <Button theme="blue" type="button" text="Log in" />
+            <Button type="button" text="Log in" />
             <a onClick={handleOpenModalRecoverSign} href="">
-              Forgot Password?"
+              Forgot Password?
             </a>
             <Button
               variant="smaller"
+              theme="green"
               type="button"
               onClick={handleOpenModalSignin}
               text="Create new account"
             />
-
             <SignIn
               setopenSignModal={setopenSignModal}
               openSignModal={openSignModal}

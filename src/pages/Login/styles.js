@@ -6,10 +6,6 @@ export const Container = styled.div`
 
   height: 100vh;
   margin: 0 auto;
-
-  .text {
-    max-width: 1220px;
-  }
 `;
 
 export const LeftSide = styled.div`
@@ -57,7 +53,6 @@ export const LeftSide = styled.div`
 
 export const RightSide = styled.div`
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 
   div {
@@ -66,7 +61,7 @@ export const RightSide = styled.div`
     justify-content: center;
 
     height: 80vh;
-    width: 80%;
+    width: 70%;
 
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.07),
       20px 1px 60px rgba(0, 0, 0, 0.07);
@@ -83,43 +78,55 @@ export const RightSide = styled.div`
     height: 60vh;
     width: 60%;
 
-    color: ${(props) => props.theme["-600"]};
+    color: ${(props) => props.theme["black-200"]};
 
     h5 {
       font-size: 2rem;
-      text-align: center;
-
       margin-bottom: 2rem;
+      text-align: center;
     }
 
     label {
-      text-align: le;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
       margin: 0.5rem 0;
 
       &:last-of-type {
         margin-top: 2rem;
       }
     }
+
     input {
-      padding: 0.1rem 0.5rem;
+      padding: 1.3rem 0.5rem;
       height: 2.5rem;
       border: 0.5px solid ${(props) => props.theme["gray-300"]};
       border-radius: 0.25rem;
 
       outline: none;
-      border: 1px solid ${(props) => props.theme["blue-200"]};
       transition: 0.5s;
 
       &::placeholder {
         font-size: 0.8rem;
       }
+
+      &:active,
+      :focus {
+        border: 1px solid ${(props) => props.theme["blue-200"]};
+      }
+    }
+
+    Button {
+      margin-top: 2rem;
+
+      &:last-of-type {
+        margin: 2rem auto;
+      }
     }
 
     a {
       margin-top: 1rem;
-      text-align: end;
       font-size: 0.8rem;
+      text-align: end;
       text-decoration: none;
 
       color: ${(props) => props.theme["blue-600"]};
