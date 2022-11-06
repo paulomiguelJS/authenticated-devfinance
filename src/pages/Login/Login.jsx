@@ -1,6 +1,8 @@
 import { Container, LeftSide, RightSide } from "./styles";
 import dollarIcon from "../../assets/dollar-icon.svg";
+
 import { SignIn } from "./SignIn/SignIn";
+import { Button } from "../../components/Button";
 import { RecoverPassword } from "./RecoverPassword/RecoverPassword";
 
 import { useState } from "react";
@@ -38,12 +40,18 @@ export function Login() {
             <input type="text" placeholder="paul@email.com" />
             <label htmlFor="">Password</label>
             <input type="password" placeholder="Enter your Password" />
-            <button type="button" onClick={handleOpenModalSignin}>
-              Sign in
-            </button>
-            <button type="button" onClick={handleOpenModalRecoverSign}>
-              Forgot Password?
-            </button>
+
+            <Button theme="blue" type="button" text="Log in" />
+            <a onClick={handleOpenModalRecoverSign} href="">
+              Forgot Password?"
+            </a>
+            <Button
+              variant="smaller"
+              type="button"
+              onClick={handleOpenModalSignin}
+              text="Create new account"
+            />
+
             <SignIn
               setopenSignModal={setopenSignModal}
               openSignModal={openSignModal}
@@ -52,7 +60,6 @@ export function Login() {
               setopenRecoverModal={setopenRecoverModal}
               openRecoverModal={openRecoverModal}
             />
-            <button>Login</button>
           </form>
         </div>
       </RightSide>

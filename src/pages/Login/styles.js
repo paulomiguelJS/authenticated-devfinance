@@ -120,8 +120,9 @@ export const RightSide = styled.div`
       margin-top: 1rem;
       text-align: end;
       font-size: 0.8rem;
+      text-decoration: none;
 
-      color: ${(props) => props.theme["-600"]};
+      color: ${(props) => props.theme["blue-600"]};
       text-decoration: none;
       transition: 0.5s;
 
@@ -131,23 +132,6 @@ export const RightSide = styled.div`
 
       &:visited {
         color: none;
-      }
-    }
-
-    button {
-      margin-top: 5rem;
-      padding: 0.7rem;
-
-      background-color: ${(props) => props.theme["blue-200"]};
-      border-radius: 0.25rem;
-      border: ${(props) => props.theme["blue-200"]};
-
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: ${(props) => props.theme["white-400"]};
-      transition: background-color 0.2s;
-      &:hover {
-        background-color: ${(props) => props.theme["blue-600"]};
       }
     }
   }

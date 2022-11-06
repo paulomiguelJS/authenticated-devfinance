@@ -22,6 +22,7 @@ export function SignIn({ setopenSignModal, openSignModal }) {
           <div>
             <label htmlFor="name">Full name</label>
             <input id="name" type="text" placeholder="Your name" />
+
             <label htmlFor="email">Your best email</label>
             <input id="email" type="email" placeholder="joe@email.com" />
             <label htmlFor="phone">Phone</label>
