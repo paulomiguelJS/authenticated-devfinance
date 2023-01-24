@@ -8,15 +8,15 @@ import { RecoverPassword } from "./RecoverPassword/RecoverPassword";
 import { useState } from "react";
 
 export function Login() {
-  const [openSignModal, setopenSignModal] = useState(false);
-  const [openRecoverModal, setopenRecoverModal] = useState(false);
+  const [openSignModal, setOpenSignModal] = useState(false);
+  const [openRecoverModal, setOpenRecoverModal] = useState(false);
 
   const handleOpenModalSignin = () => {
-    setopenSignModal(true);
+    setOpenSignModal(true);
   };
 
   const handleOpenModalRecoverSign = () => {
-    setopenRecoverModal(true);
+    setOpenRecoverModal(true);
   };
 
   return (
@@ -52,11 +52,11 @@ export function Login() {
               text="Create new account"
             />
             <SignIn
-              setopenSignModal={setopenSignModal}
+              setOpenSignModal={setOpenSignModal}
               openSignModal={openSignModal}
             />
             <RecoverPassword
-              setopenRecoverModal={setopenRecoverModal}
+              setOpenRecoverModal={setOpenRecoverModal}
               openRecoverModal={openRecoverModal}
             />
           </form>

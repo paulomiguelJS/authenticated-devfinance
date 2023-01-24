@@ -1,10 +1,12 @@
 import Modal from "react-modal";
+
 import { Container } from "./styles";
+
 import logoImg from "../../../assets/logo.svg";
 
-export function SignIn({ setopenSignModal, openSignModal }) {
+export function SignIn({ setOpenSignModal, openSignModal }) {
   function handleCloseModal() {
-    setopenSignModal(false);
+    setOpenSignModal(false);
   }
 
   return (
@@ -32,7 +34,8 @@ export function SignIn({ setopenSignModal, openSignModal }) {
           </div>
           <button type="submit">Create Account</button>
           <span>
-            I already have an account <a>Log in</a>
+            I already have an account
+            <a onClick={handleCloseModal}>Log in</a>
           </span>
         </Container>
       </Modal>
