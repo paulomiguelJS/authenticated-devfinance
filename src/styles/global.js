@@ -51,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .react-modal-content {
-    width: 100%;
+    width: 90%;
     max-width: 576px;
     background: ${(props) => props.theme["white-400"]};
     padding: 3rem;

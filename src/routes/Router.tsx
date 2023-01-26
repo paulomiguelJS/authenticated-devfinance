@@ -5,8 +5,8 @@ import { Login } from "../pages/Login/Login";
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Home />} />
+      <Route path="/" element={<Login />} />
     </Routes>
   );
 }

@@ -2,8 +2,8 @@ import { Container, LeftSide, RightSide } from "./styles";
 import dollarIcon from "../../assets/dollar-icon.svg";
 
 import { SignIn } from "./SignIn/SignIn";
-import { Button } from "../../components/Button";
 import { RecoverPassword } from "./RecoverPassword/RecoverPassword";
+import { Button } from "../../components/Button";
 
 import { useState } from "react";
 
@@ -15,7 +15,7 @@ export function Login() {
     setOpenSignModal(true);
   };
 
-  const handleOpenModalRecoverSign = () => {
+  const handleOpenModalRecoverPassword = () => {
     setOpenRecoverModal(true);
   };
 
@@ -41,7 +41,7 @@ export function Login() {
             <label>Password</label>
             <input type="password" placeholder="Enter your Password" />
             <Button type="button" text="Log in" />
-            <a onClick={handleOpenModalRecoverSign} href="">
+            <a onClick={handleOpenModalRecoverPassword} href="">
               Forgot Password?
             </a>
             <Button
