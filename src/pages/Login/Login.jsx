@@ -41,11 +41,8 @@ export function Login() {
             <label>Password</label>
             <input type="password" placeholder="Enter your Password" />
             <Button type="button" text="Log in" />
-            <a onClick={handleOpenModalRecoverPassword} href="">
-              Forgot Password?
-            </a>
+            <a onClick={handleOpenModalRecoverPassword}>Forgot Password?</a>
             <Button
-              variant="smaller"
               theme="green"
               type="button"
               onClick={handleOpenModalSignin}
