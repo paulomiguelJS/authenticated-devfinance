@@ -128,6 +128,7 @@ export const RightSide = styled.div`
       font-size: 0.8rem;
       text-align: end;
       text-decoration: none;
+      cursor: pointer;
 
       color: ${(props) => props.theme["blue-600"]};
       text-decoration: none;
