@@ -1,16 +1,9 @@
-import { createContext, useState, useEffect, useContext } from "react";
-import { api } from "../services/api";
-
+import { createContext, useState, useContext } from "react";
+// import firebase from "../services/firebaseConnection";
 const TransactionsContext = createContext([]);
 
 export function TransactionsProvider({ children }) {
   const [transactions, setTransactions] = useState([]);
-
-  useEffect(() => {
-    api
-      .get("transactions")
-      .then((response) => setTransactions(response.data.transactions));
-  }, []);
 
   async function createTransaction(transactionInput) {
     const response = await api.post("/transactions", {

@@ -14,7 +14,6 @@ export function NewTransactionModal({ isOpen, onRequestClose }) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState();
   const [category, setCategory] = useState("");
-
   const [type, setType] = useState("deposit");
 
   async function handleCreateNewTransaciton(event) {
@@ -58,7 +57,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }) {
           type="number"
           placeholder="Amount"
           value={amount}
-          onChange={(event) => setAmount(event.target.value)}
+          onChange={(event) => setAmount(Number(event.target.value))}
         />
         <TransactionTypeContainer>
           <RadioBox
